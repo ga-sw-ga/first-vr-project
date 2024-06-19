@@ -10,7 +10,7 @@ public class TrashTrigger : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Grabbable"))
+        if (other.gameObject.CompareTag("Meteor"))
         {
             OnEnterEvent.Invoke(other.gameObject);
         }

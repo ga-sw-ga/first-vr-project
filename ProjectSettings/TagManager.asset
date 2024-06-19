@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Grabbable
   - LeftHand
   - RightHand
+  - Meteor
+  - Energy
   layers:
   - Default
   - TransparentFX

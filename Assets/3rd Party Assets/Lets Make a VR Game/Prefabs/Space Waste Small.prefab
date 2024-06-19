@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2905569556755496206}
   m_Layer: 0
   m_Name: Space Waste Small
-  m_TagString: Grabbable
+  m_TagString: Meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,5 +300,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53c867bb618b2b4ca5d1cbf80bdefd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftHandModel: {fileID: 0}
-  rightHandModel: {fileID: 0}
