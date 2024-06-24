@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.014845942, g: 0.012781387, b: 0.014349211, a: 1}
+  m_IndirectSpecularColor: {r: 0.014845945, g: 0.012781389, b: 0.014349213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1393,7 +1393,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2490,6 +2490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Right Teleport Interactor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761784063978902507, guid: c1800acf6366418a9b5f610249000331,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4065,11 +4070,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 868819971}
     m_Modifications:
+    - target: {fileID: 1492457290346192875, guid: dc40d4936f6d7f44a88297e1d42d288a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Meteor
+      objectReference: {fileID: 0}
     - target: {fileID: 1492457290808743536, guid: dc40d4936f6d7f44a88297e1d42d288a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3038c9a5d8da2fb4d9385a81c4eb7e27, type: 2}
+    - target: {fileID: 1492457291336030837, guid: dc40d4936f6d7f44a88297e1d42d288a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Meteor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492457292214062564, guid: dc40d4936f6d7f44a88297e1d42d288a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Meteor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492457292308410173, guid: dc40d4936f6d7f44a88297e1d42d288a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Meteor
+      objectReference: {fileID: 0}
     - target: {fileID: 3496798070150495656, guid: dc40d4936f6d7f44a88297e1d42d288a,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4140,11 +4165,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Space Waste Breakable
       objectReference: {fileID: 0}
-    - target: {fileID: 4618974337585498635, guid: dc40d4936f6d7f44a88297e1d42d288a,
-        type: 3}
-      propertyPath: m_TagString
-      value: Meteor
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4209,8 +4229,8 @@ MonoBehaviour:
   m_Camera: {fileID: 1256057205}
   m_OriginBaseGameObject: {fileID: 1282155552}
   m_CameraFloorOffsetObject: {fileID: 1016553888}
-  m_RequestedTrackingOriginMode: 2
-  m_CameraYOffset: 1.1176
+  m_RequestedTrackingOriginMode: 1
+  m_CameraYOffset: 1
 --- !u!4 &1282155555
 Transform:
   m_ObjectHideFlags: 0
@@ -4309,13 +4329,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.5
-  m_Radius: 0.15
+  m_Height: 2
+  m_Radius: 0.1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.785, z: 0}
+  m_Center: {x: 0, y: 1.1, z: 0}
 --- !u!114 &1282155559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4367,7 +4387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6bf904e410ee8479f9093d8830d1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LocomotionProvider: {fileID: 1282155556}
+  m_LocomotionProvider: {fileID: 0}
   m_MinHeight: 0
   m_MaxHeight: Infinity
 --- !u!114 &1282155561
@@ -4501,11 +4521,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1732086931}
     m_Modifications:
-    - target: {fileID: 6158800709001278190, guid: b7ee10ba487867d47a2942e352102583,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: f41ce6e24c2cc2e488819d20094e5dc2, type: 2}
     - target: {fileID: 8466306517634800441, guid: b7ee10ba487867d47a2942e352102583,
         type: 3}
       propertyPath: m_Name
@@ -6360,6 +6375,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PushButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4539088451305259770, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

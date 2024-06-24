@@ -39,11 +39,17 @@ public class BreakableMeteor : MonoBehaviour
         {
             timer = Mathf.Min(timer + Time.deltaTime, BREAK_TIME);
         }
+        else
+        {
+            timer = Mathf.Max(timer - Time.deltaTime, 0f);
+        }
 
         emissionColor = new Color(1f - (timer / BREAK_TIME), 0f, 0f, 1f);
         // print(material.GetColor("_EmissionColor").r);
         material.EnableKeyword("_EMISSION");
         material.SetColor("_EmissionColor", emissionColor);
+
+        isBreaking = false;
     }
 
     public void BreakRayify()

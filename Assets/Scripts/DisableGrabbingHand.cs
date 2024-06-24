@@ -37,11 +37,11 @@ public class DisableGrabbingHand : MonoBehaviour
 
     void ShowGrabbingHand(SelectExitEventArgs args)
     {
-        if (args.interactorObject.transform.CompareTag("LeftHand"))
+        if (args.interactorObject.transform.parent.CompareTag("LeftHand"))
         {
             leftHandModel.SetActive(true);
         }
-        else if (args.interactorObject.transform.CompareTag("RightHand"))
+        else if (args.interactorObject.transform.parent.CompareTag("RightHand"))
         {
             rightHandModel.SetActive(true);
         }
