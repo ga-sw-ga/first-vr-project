@@ -6,7 +6,7 @@ public class TrashCan : MonoBehaviour
 {
     void Start()
     {
-        GetComponentInChildren<TrashTrigger>().OnEnterEvent.AddListener(InsideTrash);
+        GetComponentInChildren<TriggerZone>().OnEnterEvent.AddListener(InsideTrash);
     }
 
     public void InsideTrash(GameObject trash)

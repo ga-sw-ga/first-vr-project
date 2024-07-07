@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BreakableMeteor : MonoBehaviour
 {
     private const float BREAK_TIME = 2f;
+
+    public UnityEvent OnBreak;
     
     private List<GameObject> pieces;
     private Material material;
@@ -74,6 +77,8 @@ public class BreakableMeteor : MonoBehaviour
             piece.SetActive(true);
             piece.transform.parent = transform.parent;
         }
+        
+        OnBreak.Invoke();
         
         gameObject.SetActive(false);
     }

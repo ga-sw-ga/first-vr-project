@@ -282,3 +282,4 @@ MonoBehaviour:
   OnEnterEvent:
     m_PersistentCalls:
       m_Calls: []
+  targetTag: Meteor
