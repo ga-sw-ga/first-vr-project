@@ -15,8 +15,13 @@ public class OutsideSpace : MonoBehaviour
     public XRLever lever;
     public XRKnob knob;
     public XRSlider slider;
-
+    
     private float forwardVelocity, sideVelocity;
+
+    private void Start()
+    {
+        AudioManager.instance.Play("Engine");
+    }
 
     private void Update()
     {
@@ -31,5 +36,7 @@ public class OutsideSpace : MonoBehaviour
 
         Vector3 velocity = new Vector3(sideVelocity, 0f, forwardVelocity);
         transform.position += velocity * Time.deltaTime;
+
+        AudioManager.instance.sounds[1].volume = forwardVelocity / MAX_BOOST_SPEED;
     }
 }

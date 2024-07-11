@@ -19,7 +19,7 @@ public class BreakableMeteor : MonoBehaviour
     private void Awake()
     {
         pieces = new List<GameObject>();
-        for (int i = 0; i < transform.childCount; i++)
+        for (int i = 0; i < transform.childCount - 1; i++)
         {
             pieces.Add(transform.GetChild(i).gameObject);
         }
