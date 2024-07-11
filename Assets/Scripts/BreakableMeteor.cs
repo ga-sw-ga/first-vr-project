@@ -76,6 +76,7 @@ public class BreakableMeteor : MonoBehaviour
         {
             piece.SetActive(true);
             piece.transform.parent = transform.parent;
+            piece.GetComponent<Rigidbody>().useGravity = true;
         }
         
         OnBreak.Invoke();

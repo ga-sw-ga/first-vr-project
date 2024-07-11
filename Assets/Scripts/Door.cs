@@ -6,10 +6,12 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     private Animator animator;
+    private AudioSource audioSource;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void OpenDoor()
@@ -25,5 +27,6 @@ public class Door : MonoBehaviour
     public void ToggleDoor()
     {
         animator.SetBool("character_nearby", !animator.GetBool("character_nearby"));
+        audioSource.Play();
     }
 }

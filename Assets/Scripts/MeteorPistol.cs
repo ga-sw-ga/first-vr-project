@@ -13,12 +13,14 @@ public class MeteorPistol : MonoBehaviour
     private ParticleSystem shootParticles;
     private Transform shootSource;
     private BreakableMeteor breakingObject;
+    private AudioSource audioSource;
     private bool isShooting = false;
 
     private void Awake()
     {
         shootParticles = GetComponentInChildren<ParticleSystem>();
         shootSource = shootParticles.transform;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -40,12 +42,15 @@ public class MeteorPistol : MonoBehaviour
     {
         shootParticles.Play();
         isShooting = true;
+//        AudioManager.instance.Play("Gun");
+        audioSource.Play();
     }
 
     private void StopShoot()
     {
         shootParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         isShooting = false;
+        audioSource.Stop();
     }
 
     private void RayCastCheck()
